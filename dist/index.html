@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <title>AJAX - PHP - DISCHI</title>
     <link rel="stylesheet" href="app.css">
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- <script src="app.js" charset="utf-8"></script> -->
-    <?php require 'api.php' ?>
+    <script src="app.js" charset="utf-8"></script>
   </head>
   <body>
     <header>
@@ -29,19 +29,10 @@
       </div>
 
       <div class="cds-container container">
-        <?php
-          foreach ($db as $album) { ?>
-        <div class="cd" data-genre="{{genre}}">
-            <img src="<?php echo $album['poster'] ?>" alt="">
-            <h3><?php echo $album['title']; ?></h3>
-            <span class="author"><?php echo $album['author'];?></span>
-            <span class="year"><?php echo $album['year']; ?></span>
-        </div>
-        <?php }  ?>
+
       </div>
 
     </main>
-
 
     <!--  ||| HANDLEBARS ||| -->
 

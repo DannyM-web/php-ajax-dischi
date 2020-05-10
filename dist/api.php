@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 
 $db = [
     [
@@ -72,4 +73,6 @@ $db = [
       "year" => "1987"
     ]
 ];
+
+echo json_encode($db);
 ?>
