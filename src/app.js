@@ -5,16 +5,18 @@
 // });
 
 $( document ).ready(function() {
-const Handlebars = require("handlebars");
+// const Handlebars = require("handlebars");
 
 
    $.ajax({
-    url:'api.php',
+    url:'server.php',
     method: 'GET',
     success: function(data) {
 
-      const source = $('#entry-template').html();
-      const template = Handlebars.compile(source);
+      // console.log(data);
+
+      var source = $('#entry-template').html();
+      var template = Handlebars.compile(source);
 
       for (var i = 0; i < data.length; i++) {
         console.log(data[i]);
@@ -25,9 +27,13 @@ const Handlebars = require("handlebars");
           author: album.author,
           year: album.year
         }
+        console.log(context);
 
         var html = template(context);
-        $('.cds-container container').append(html);
+
+        console.log('html', html);
+
+        $('.cds-container.container').append(html);
 
       }
     },
