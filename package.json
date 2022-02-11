@@ -31,6 +31,6 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
-    "express-handlebars": "^4.0.4"
+    "express-handlebars": "^5.3.1"
   }
 }
